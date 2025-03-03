@@ -4,25 +4,28 @@ This is a starter kit for interacting with the 0G Compute Network, which provide
 
 ## Repository Branches
 
-### 1. Master Branch
+### Main Branch
 REST API implementation using Express framework with Swagger documentation.
 ```bash
-git checkout master
+git checkout main
 ```
 
 - Features:
   - RESTful endpoints for AI services
-  - Swagger UI for API testing
+  - Swagger UI for API testing and documentation
+  - TypeScript implementation for type safety
+  - Automatic ledger initialization at startup
 
-### 2. CLI Version Branch
-Command-line interface implementation available in the cli-version branch.
+### CLI Branch (Current)
+CLI implementation using Node.js and Commander.
 ```bash
 git checkout cli-version
 ```
 
 - Features:
-  - Direct AI service access via CLI
-  - Command-line arguments for configuration
+  - CLI implementation for AI services
+  - TypeScript implementation for type safety
+
 
 ## Features
 
@@ -232,4 +235,36 @@ npm start -- -k YOUR_PRIVATE_KEY list
 ```
 
 Deposit funds:
+```bash
+npm start -- -k YOUR_PRIVATE_KEY deposit 0.1
+# Output:
+# Funds deposited successfully
 ```
+
+
+Query an AI service:
+```bash
+npm start -- -k YOUR_PRIVATE_KEY query 0x123...
+# Output:
+# Query sent successfully
+```
+
+Manually settle a fee:
+```bash
+npm start -- -k YOUR_PRIVATE_KEY settle 0x123... 0.01
+# Output:
+# Fee settled successfully
+```
+
+Check balance:
+```bash
+npm start -- -k YOUR_PRIVATE_KEY balance
+```
+
+Contribute to the project:
+1. Fork the repository
+2. Create a new branch
+3. Make your changes and commit them
+4. Push your changes to your fork
+5. Create a pull request
+
